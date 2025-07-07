@@ -1,0 +1,20 @@
+# 1- Construir a imagem docker
+docker build -t minha-imagem-escola .
+obs: o ponto é para indicar a criação naquele diretório atual.
+
+
+# 2- Rodar o container
+docker run -p 8000:8000 api-g-e
+
+
+# 3- Parar o container
+docker stop api-g-e
+
+
+# 4- subir tudo de uma só vez
+docker-compose up
+
+
+gcloud auth login
+gcloud config set project PROJECT_ID
+gcloud run deploy --port=8000
